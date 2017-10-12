@@ -1,7 +1,10 @@
 html {
   font-size: 10px;
-  background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
-  background-size: cover;
+  background: #FF512F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
 }
 body,html {
   margin: 0;
@@ -18,7 +21,7 @@ body,html {
 }
 
 .key {
-  border: .4rem solid black;
+  border: .4rem solid #f1c40f;
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
@@ -27,14 +30,14 @@ body,html {
   width: 10rem;
   text-align: center;
   color: white;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+  background: rgba(0, 0, 0, 0.098);
+  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.228);
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: #f39c12;
+  box-shadow: 0 0 1rem #f39c12;
 }
 
 kbd {
@@ -46,5 +49,5 @@ kbd {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #ffc600;
+  color: #f1c40f;
 }
