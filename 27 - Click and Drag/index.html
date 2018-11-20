@@ -38,33 +38,33 @@
   const slider = document.querySelector('.items');
   let isDown = false;
   let startX;
-  let scrollLeft;
+  let scrollLeft; 
 
   slider.addEventListener('mousedown', (e) => {
-    isDown = true;
+    isDown=true;
     slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
+    
   });
 
   slider.addEventListener('mouseleave', () => {
-    isDown = false;
+    isDown=false;
     slider.classList.remove('active');
   });
 
   slider.addEventListener('mouseup', () => {
-    isDown = false;
+    isDown=false;
     slider.classList.remove('active');
   });
 
   slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;  // stop the fn from running
+    if(!isDown) return;
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3;
+    const walk = (x -startX) * 3;
     slider.scrollLeft = scrollLeft - walk;
   });
-
 </script>
 
   </body>
